@@ -17,7 +17,7 @@ services:
   productsystem:
     container_name: productsystem
     ports:
-    - 8001:80 
+    - 80:80
     image: ${DOCKER_REGISTRY-}productsystem
     build:
       context: .

@@ -36,7 +36,7 @@ namespace ProductSystem.Controllers
         public ActionResult Post([FromBody] ProductToCreateDto productToCreate)
         {
             var result = _productService.CreateProduct(productToCreate);
-            return CreatedAtAction(nameof(GetById), new {id=result.Id});
+            return CreatedAtAction(nameof(GetById), new {id=result.Id},result);
         }
 
         // PUT api/<ValuesController>/5
